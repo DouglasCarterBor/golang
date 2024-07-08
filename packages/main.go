@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"modulo/assistant"
+	"module/assistant"
 	"github.com/badoux/checkmail"
 )
 
