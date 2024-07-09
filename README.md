@@ -17,3 +17,5 @@ in go, every data type has a value of 0
 more than one return per function  
 ### Operators  
 in go there is no ternary operator
+### Heritage
+there is no inheritance in go
