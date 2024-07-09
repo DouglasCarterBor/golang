@@ -13,6 +13,7 @@ go doesn´t let you import a variable and not use it
 always double quotes for string  
 there is no char in go
 in go, every data type has a value of 0  
-### Functions
+### Functions  
 more than one return per function  
-
+### Operators  
+in go there is no ternary operator
