@@ -19,3 +19,7 @@ more than one return per function
 in go there is no ternary operator
 ### Heritage
 there is no inheritance in go
+### Ponteirs
+memory reference  
+& put variable in pointer
+* differentiation
