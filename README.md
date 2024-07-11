@@ -30,6 +30,9 @@ when slice overflows the size, go creates another internal array and doubles it
 array a list of fixed size and slice a list without fixed size  
 ### Maps
 key value structure and not a mutable structure  
-### Control Structures  
+### If and Else  
 start a variable directly in if  
 there are no relatives in go  
+### Switch  
+fallthrough  
+in go you don't need to use the break clause  
