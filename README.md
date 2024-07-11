@@ -28,3 +28,5 @@ if you don't specify the size of an array, it becomes a slice
 ### Internal Arrays  
 when slice overflows the size, go creates another internal array and doubles it  
 array a list of fixed size and slice a list without fixed size  
+### Maps
+key value structure and not a mutable structure  
