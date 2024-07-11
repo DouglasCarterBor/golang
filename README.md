@@ -21,5 +21,7 @@ in go there is no ternary operator
 there is no inheritance in go
 ### Ponteirs
 memory reference  
-& put variable in pointer
-* differentiation
+& put variable in pointer  
+* differentiation  
+### Arrays and Slices  
+if you don't specify the size of an array, it becomes a slice  
