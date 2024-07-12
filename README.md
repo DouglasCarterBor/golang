@@ -39,3 +39,6 @@ in go you don't need to use the break clause
 ### Loops
 go only has for  
 you can't use a range in a struct  
+### Advanced Functions  
+functions with named return  
+
