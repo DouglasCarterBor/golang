@@ -44,3 +44,4 @@ functions with named return
 variatic function  
 anonymous functions  
 recursive functions  
+defer  
