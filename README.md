@@ -43,3 +43,4 @@ you can't use a range in a struct
 functions with named return  
 variatic function  
 anonymous functions  
+recursive functions  
