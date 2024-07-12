@@ -45,3 +45,4 @@ variatic function
 anonymous functions  
 recursive functions  
 defer  
+panic amd recover  
