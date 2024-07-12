@@ -41,4 +41,4 @@ go only has for
 you can't use a range in a struct  
 ### Advanced Functions  
 functions with named return  
-
+variatic function  
