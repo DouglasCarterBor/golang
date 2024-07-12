@@ -22,7 +22,7 @@ there is no inheritance in go
 ### Ponteirs
 memory reference  
 & put variable in pointer  
-* differentiation  
+\* differentiation  
 ### Arrays and Slices  
 if you don't specify the size of an array, it becomes a slice  
 ### Internal Arrays  
@@ -36,3 +36,6 @@ there are no relatives in go
 ### Switch  
 fallthrough  
 in go you don't need to use the break clause  
+### Loops
+go only has for  
+you can't use a range in a struct  
