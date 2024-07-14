@@ -66,3 +66,4 @@ go build
 competition != parallelism  
 goroutines  
 wait group  
+channel  
