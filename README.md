@@ -69,3 +69,5 @@ wait group
 channel  
 channel with buffer  
 select  
+### Competition standards  
+worker pools pattern  
