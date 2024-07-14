@@ -71,3 +71,4 @@ channel with buffer
 select  
 ### Competition standards  
 worker pools pattern  
+generator pattern  
