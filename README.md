@@ -55,3 +55,11 @@ methods are functions that are associated with user-defined types
 implicitly implemented  
 ### Interface with generic type  
 Be careful not to turn int into a defective solution  
+### Command line application  
+receive some inputs via command line 
+go mode init command_line_application  
+go get github.com/urfave/cli  
+go run main.go ip --host mercadolivre.com.br  
+go build  
+./command_line_application ip --host amazon.com.br  
+
