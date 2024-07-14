@@ -67,3 +67,4 @@ competition != parallelism
 goroutines  
 wait group  
 channel  
+channel with buffer  
