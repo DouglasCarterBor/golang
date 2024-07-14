@@ -49,4 +49,9 @@ panic amd recover
 closure  
 functions with pointers  
 init  
-### 
+### Methods  
+methods are functions that are associated with user-defined types  
+### Interfaces  
+implicitly implemented  
+### Interface with generic type  
+Be careful not to turn int into a defective solution  
