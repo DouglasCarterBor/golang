@@ -72,3 +72,4 @@ select
 ### Competition standards  
 worker pools pattern  
 generator pattern  
+multiplexer pattern    
