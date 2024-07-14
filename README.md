@@ -65,3 +65,4 @@ go build
 ### Competition  
 competition != parallelism  
 goroutines  
+wait group  
