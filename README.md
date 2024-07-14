@@ -48,3 +48,4 @@ defer
 panic amd recover  
 closure  
 functions with pointers  
+init  
