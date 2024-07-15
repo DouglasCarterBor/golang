@@ -69,7 +69,9 @@ wait group
 channel  
 channel with buffer  
 select  
-### Competition standards  
+### Competition Standards  
 worker pools pattern  
 generator pattern  
-multiplexer pattern    
+multiplexer pattern  
+### Automated Tests  
+creating function for testing  
