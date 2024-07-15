@@ -57,7 +57,7 @@ implicitly implemented
 be careful not to turn int into a defective solution  
 ### Command line application  
 receive some inputs via command line 
-go mode init command_line_application  
+go mod init command_line_application  
 go get github.com/urfave/cli  
 go run main.go ip --host mercadolivre.com.br  
 go build  
@@ -75,3 +75,7 @@ generator pattern
 multiplexer pattern  
 ### Automated Tests  
 creating function for testing  
+basic unit testing  
+#### Commands
+go mod init introduction  
+go get golang.org/x/text/cases golang.org/x/text/language  
