@@ -76,6 +76,7 @@ multiplexer pattern
 ### Automated Tests  
 creating function for testing  
 basic unit testing  
+unit testing with different scenarios  
 #### Commands
 go mod init introduction  
 go get golang.org/x/text/cases golang.org/x/text/language  
