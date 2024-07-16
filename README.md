@@ -78,6 +78,7 @@ creating function for testing
 basic unit testing  
 unit testing with different scenarios  
 go test commands tips and coverage reports  
+function with sub tests  
 #### Commands
 go mod init introduction  
 go get golang.org/x/text/cases golang.org/x/text/language  
@@ -91,3 +92,6 @@ go test --cover
 go test --coverprofile coverage.txt  
 go tool cover --func=coverage.txt  
 go tool cover --html=coverage.txt  
+### Advanced Test  
+t.Run  
+TDD  
