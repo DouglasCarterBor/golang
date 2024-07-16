@@ -1,6 +1,9 @@
-package adresses
+package adresses_test
 
-import "testing"
+import (
+	. "introduction/adresses"
+	"testing"
+)
 
 type scenario struct { 
 	address string

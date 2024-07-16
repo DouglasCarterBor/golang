@@ -1,0 +1,7 @@
+mode: set
+introduction/adresses/adresses.go:14.42,21.39 5 1
+introduction/adresses/adresses.go:21.39,22.36 1 1
+introduction/adresses/adresses.go:22.36,24.4 1 1
+introduction/adresses/adresses.go:27.2,27.19 1 1
+introduction/adresses/adresses.go:27.19,30.3 2 1
+introduction/adresses/adresses.go:32.2,32.15 1 0
