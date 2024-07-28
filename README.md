@@ -153,4 +153,5 @@ router.HandleFunc("/users", server.CreateUser).Methods("POST")
 router.HandleFunc("/users", server.GetUsers).Methods("GET")  
 #### Get Data by ID  
 router.HandleFunc("/users/{id}", server.GetUser).Methods("GET")  
-
+#### Upsate data  
+router.HandleFunc("/users/{id}", server.UpdateUser).Methods("PUT")  

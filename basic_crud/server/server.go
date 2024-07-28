@@ -107,6 +107,8 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	defer db.Close()
+
 	row, error := db.Query("select * from users where id = ?", ID)
 	if error != nil {
 		w.Write([]byte("Error fetching user"))
@@ -128,5 +130,52 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
+
+}
+
+func UpdateUser(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+
+	ID, error := strconv.ParseUint(params["id"], 10, 32)
+	if error != nil {
+		w.Write([]byte("Error converting id to int"))
+		return
+	}
+
+	bodyRequest, error := io.ReadAll(r.Body)
+	if error != nil {
+		w.Write([]byte("Error reading body request"))
+		return
+	}
+
+	var user user
+	if error = json.Unmarshal(bodyRequest, &user); error != nil {
+		w.Write([]byte("Error converting body request to user struct"))
+		return
+	}
+
+	db, error := database.Connect()
+	if error != nil {
+		w.Write([]byte("Error connecting to the database"))
+		return
+	}
+
+	defer db.Close()
+
+	statement, error := db.Prepare("update users set name = ?, email = ? where id = ?")
+	if error != nil {
+		w.Write([]byte("Error creating statement"))
+		return
+	}
+
+	defer statement.Close()
+
+	if _, error := statement.Exec(user.Name, user.Email, ID); error != nil {
+		w.Write([]byte("Error updating user"))
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("User updated successfully"))
 
 }
