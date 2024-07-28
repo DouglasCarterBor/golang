@@ -141,4 +141,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'golang'@'%' IDENTIFIED BY 'golang';
 FLUSH PRIVILEGES;  
 sudo apt update  
 sudo apt install mysql-client-core-8.0  
+#### Installing Postman  
+https://www.postman.com/  
 
