@@ -108,3 +108,19 @@ rendering web page
 applyng CSS  
 #### JS  
 introduction to javascript  
+### Database  
+#### Installation on linux  
+sudo apt-get update  
+sudo apt-get install mysql-server  
+sudo mysql_secure_installation utility  
+sudo systemctl start mysql  
+sudo systemctl enable mysql  
+sudo mysql -u root -p  
+show databases;  
+create database golang;  
+use golang;  
+CREATE TABLE users (id INT auto_increment primary key, name VARCHAR(50) NOT NULL, email VARCHAR(50) NOT NULL) ENGINE=INNODB;  
+CREATE USER 'golang'@'localhost' IDENTIFIED BY 'golang';  
+GRANT ALL PRIVILEGES ON golang.* TO 'golang'@'localhost';  
+exit;  
+mysql -u golang -p  
