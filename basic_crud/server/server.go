@@ -62,3 +62,31 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	user.ID = int(id)
 
 }
+
+func GetUsers(w http.ResponseWriter, r *http.Request) {
+	db, error := database.Connect()
+	if error != nil {
+		w.Write([]byte("Error connecting to the database"))
+		return
+	}
+	defer db.Close()
+
+	rows, error := db.Query("select * from users")
+	if error != nil {
+		w.Write([]byte("Error fetching users"))
+		return
+	}
+	defer rows.Close()
+
+	var users []user
+	for rows.Next() {
+		var user user
+		rows.Scan(&user.ID, &user.Name, &user.Email)
+		users = append(users, user)
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(users)
+}
+
