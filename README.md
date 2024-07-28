@@ -147,4 +147,6 @@ https://www.postman.com/
 go mod init crud  
 CRUD = Create, Read, Update, Delete  
 go get github.com/gorilla/mux  
+#### Insert Data
+router.HandleFunc("/users", server.CreateUser).Methods("POST")  
 
