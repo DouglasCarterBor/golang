@@ -130,3 +130,15 @@ MySQL Installer for Windows
 MySQL community server  
 Workbench  
 macOS select macOS  
+#### Connecting to the database  
+go mod init database  
+go get github.com/go-sql-driver/mysql  
+implicit import "_"  
+SQL is a dialect that is used in several banks  
+##### Running on WSL 2 with windows database  
+cat /etc/resolv.conf | grep nameserver
+GRANT ALL PRIVILEGES ON *.* TO 'golang'@'%' IDENTIFIED BY 'golang';  
+FLUSH PRIVILEGES;  
+sudo apt update  
+sudo apt install mysql-client-core-8.0  
+
