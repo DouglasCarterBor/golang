@@ -151,3 +151,6 @@ go get github.com/gorilla/mux
 router.HandleFunc("/users", server.CreateUser).Methods("POST")  
 #### Get Data  
 router.HandleFunc("/users", server.GetUsers).Methods("GET")  
+#### Get Data by ID  
+router.HandleFunc("/users/{id}", server.GetUser).Methods("GET")  
+

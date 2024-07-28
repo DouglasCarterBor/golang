@@ -6,6 +6,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 type user struct {
@@ -28,7 +31,6 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Error converting body request to user struct"))
 		return
 	}
-	
 
 	db, error := database.Connect()
 	if error != nil {
@@ -90,3 +92,41 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(users)
 }
 
+func GetUser(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+
+	ID, error := strconv.ParseUint(params["id"], 10, 64)
+	if error != nil {
+		w.Write([]byte("Error converting id to int"))
+		return
+	}
+
+	db, error := database.Connect()
+	if error != nil {
+		w.Write([]byte("Error connecting to the database"))
+		return
+	}
+
+	row, error := db.Query("select * from users where id = ?", ID)
+	if error != nil {
+		w.Write([]byte("Error fetching user"))
+		return
+	}
+
+	var user user
+	if row.Next() {
+		if error := row.Scan(&user.ID, &user.Name, &user.Email); error != nil {
+			w.Write([]byte("Error scanning user"))
+			return
+		}
+	}
+
+	if erro := json.NewEncoder(w).Encode(user); erro != nil {
+		w.Write([]byte("Error encoding user"))
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
+
+}
