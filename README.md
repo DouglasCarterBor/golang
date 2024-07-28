@@ -143,4 +143,8 @@ sudo apt update
 sudo apt install mysql-client-core-8.0  
 #### Installing Postman  
 https://www.postman.com/  
+#### Creating structure to CRUD  
+go mod init crud  
+CRUD = Create, Read, Update, Delete  
+go get github.com/gorilla/mux  
 
