@@ -124,3 +124,9 @@ CREATE USER 'golang'@'localhost' IDENTIFIED BY 'golang';
 GRANT ALL PRIVILEGES ON golang.* TO 'golang'@'localhost';  
 exit;  
 mysql -u golang -p  
+#### Installation on windows or mac  
+dev.mysql.com  
+MySQL Installer for Windows  
+MySQL community server  
+Workbench  
+macOS select macOS  
